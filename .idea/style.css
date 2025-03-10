@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+}
+
+#user-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.user-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.user-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.user-card a:hover {
+    background-color: #0056b3;
+}
