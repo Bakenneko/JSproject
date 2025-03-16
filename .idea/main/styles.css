@@ -1,4 +1,3 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     background: #f9f9f9;
@@ -16,24 +15,30 @@ body {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    margin: 5px;
+    margin: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* index.html */
+.user-card:hover, .post-card:hover, .comment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* index.html*/
 #users-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-/* user-details.html */
+/* user-details.html*/
 #user-info {
-    margin-bottom: 20px;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 #load-posts {
@@ -46,6 +51,12 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#load-posts:hover {
+    background-color: #0056b3;
 }
 
 #posts-container {
@@ -66,4 +77,26 @@ body {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
+
+.comment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.user-card p, .post-card p, .comment-card p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.user-card a, .post-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.user-card a:hover, .post-card a:hover {
+    text-decoration: underline;
+}
+
