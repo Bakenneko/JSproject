@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Times New Roman", sans-serif;
+    font-size: 20px;
     background: #f9f9f9;
     padding: 20px;
 }
@@ -25,14 +26,14 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* index.html*/
+/* index.html */
 #users-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-/* user-details.html*/
+/* user-details.html */
 #user-info {
     background: #fff;
     padding: 20px;
