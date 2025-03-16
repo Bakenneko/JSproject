@@ -1,16 +1,23 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const postInfo = document.getElementById("post-info");
-    const commentsContainer = document.getElementById("comments-container");
-    const postId = new URLSearchParams(window.location.search).get("postId");
+    const postId = new URLSearchParams(window.location.search).get('postId');
+    const postInfo = await fetchData(`https://jsonplaceholder.typicode.com/posts/${postId}`);
+    const postInfoDiv = document.getElementById("post-info");
 
-    postInfo.innerHTML = `<pre>${JSON.stringify(await fetchData(`https://jsonplaceholder.typicode.com/posts/${postId}`), null, 2)}</pre>`;
+    postInfoDiv.innerHTML = `
+        <p><strong>Title:</strong> ${postInfo.title}</p>
+        <p><strong>Body:</strong> ${postInfo.body}</p>
+    `;
 
     const comments = await fetchData(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`);
+    const commentsContainer = document.getElementById("comments-container");
     comments.forEach(comment => {
-        commentsContainer.appendChild(createElement("div", "comment-card", `
+        const commentCard = document.createElement("div");
+        commentCard.classList.add("comment-card");
+        commentCard.innerHTML = `
             <p><strong>Name:</strong> ${comment.name}</p>
             <p><strong>Email:</strong> ${comment.email}</p>
-            <p>${comment.body}</p>
-        `));
+            <p><strong>Comment:</strong> ${comment.body}</p>
+        `;
+        commentsContainer.appendChild(commentCard);
     });
 });

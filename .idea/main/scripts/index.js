@@ -1,11 +1,15 @@
-async function fetchData(url) {
-    const response = await fetch(url);
-    return response.json();
-}
+document.addEventListener("DOMContentLoaded", async () => {
+    const usersContainer = document.getElementById("users-container");
+    const users = await fetchData("https://jsonplaceholder.typicode.com/users");
 
-function createElement(tag, className, innerHTML) {
-    const elem = document.createElement(tag);
-    if (className) elem.classList.add(className);
-    if (innerHTML) elem.innerHTML = innerHTML;
-    return elem;
-}
+    users.forEach(user => {
+        const userCard = document.createElement("div");
+        userCard.classList.add("user-card");
+        userCard.innerHTML = `
+            <p><strong>ID:</strong> ${user.id}</p>
+            <p><strong>Name:</strong> ${user.name}</p>
+            <a href="user-details.html?userId=${user.id}">View Details</a>
+        `;
+        usersContainer.appendChild(userCard);
+    });
+});

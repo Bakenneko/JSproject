@@ -1,3 +1,4 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
     background: #f9f9f9;
@@ -19,14 +20,14 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* index.html: Юзери по 2 в рядок */
+/* index.html */
 #users-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-/* user-details.html: Блок юзера зверху, пости по 5 в ряд */
+/* user-details.html */
 #user-info {
     margin-bottom: 20px;
     background: #fff;
@@ -53,7 +54,7 @@ body {
     gap: 15px;
 }
 
-/* post-details.html: Коментарі по 4 в ряд */
+/* post-details.html */
 #comments-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
