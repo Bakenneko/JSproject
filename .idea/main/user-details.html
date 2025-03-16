@@ -1,18 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Details</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h1>User Details</h1>
-<div id="user-details"></div>
-<script src="user-details.js"></script>
+<div id="user-info"></div>
+<button id="load-posts">Post of current user</button>
+<div id="posts-container"></div>
+<script src="scripts/index.js"></script>
+<script src="scripts/user-details.js"></script>
 
 </body>
 </html>
@@ -24,3 +24,6 @@
 <!--(для отримання постыв використовуйте endpoint https://jsonplaceholder.typicode.com/users/USER_ID/posts)-->
 <!--6 Кожному посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html,-->
 <!--котра має детальну інфу про поточний пост.-->
+
+<!--user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки, по центру.-->
+<!--Блоки з короткою інфою про post - в ряд по 5.-->
